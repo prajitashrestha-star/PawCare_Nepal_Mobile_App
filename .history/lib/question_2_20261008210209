@@ -1,0 +1,28 @@
+import 'dart:io';
+
+double calculateSI({
+  required double principal,
+  required double rate,
+  required double time,
+}) {
+  return (principal * rate * time) / 100;
+}
+
+void main() {
+  print("Enter principal amount:");
+  double principal = double.parse(stdin.readLineSync()!);
+
+  print("Enter rate of interest:");
+  double rate = double.parse(stdin.readLineSync()!);
+
+  print("Enter time in years:");
+  double time = double.parse(stdin.readLineSync()!);
+
+  double simpleInterest = calculateSI(
+    principal: principal,
+    rate: rate,
+    time: time,
+  );
+
+  print("Simple Interest = $simpleInterest");
+}(question3
